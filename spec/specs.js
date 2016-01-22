@@ -34,6 +34,7 @@ describe("pingPong", function() {
 	it('should not return ping for non-factors of 3', function() {
 		expect(pingPong(23)).to.not.equal('ping');
 	});
+
 });
 
 describe('numberReturn', function() {
