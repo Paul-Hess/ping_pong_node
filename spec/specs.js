@@ -9,5 +9,9 @@ describe("pingPong", function() {
 
 	it('should return number when number is input', function() {
 		expect(pingPong(7)).to.equal(7);
+	});
+
+	it('should return pingpong for input of factor of 15', function() {
+		expect(pingPong(45)).to.equal("pingpong");
 	})
 });

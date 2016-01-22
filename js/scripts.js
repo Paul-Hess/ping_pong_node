@@ -1,8 +1,14 @@
 var pingPong = function(num) {
 	if (isNumber(num)) {
-		return num
+		num;
 	} else {
 		return "please enter a numeral";
+	}
+
+	if (num%15 === 0) {
+		return "pingpong";
+	} else {
+		return num;
 	}
 
 }
