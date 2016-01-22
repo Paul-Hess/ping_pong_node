@@ -6,7 +6,7 @@ var pingPong = function(num) {
 	if (num > 0) {
 		return numberReturn(num);
 	} else {
-		return "please enter a positive numeral";
+		alert("please enter a positive numeral");
 	}
 }
 

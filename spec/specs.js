@@ -1,6 +1,10 @@
 describe("pingPong", function() {
 	it('should reject non number inputs', function() {
-		expect(pingPong('foo')).to.equal("please enter a positive numeral");
+		expect(pingPong(-1)).to.equal(undefined);
+	});
+
+	it('should not return a number array for input 0', function() {
+		expect(pingPong(0)).to.equal(undefined);
 	});
 
 	it('should allow number inputs', function() {
@@ -41,14 +45,6 @@ describe("pingPong", function() {
 
 	it('should not return ping when 3 is not satisfied', function() {
 		expect(pingPong(2)).to.not.include('ping');
-	});
-
-	it('should not return an array for negative input', function() {
-		expect(pingPong(-1)).to.not.eql([]);
-	});
-
-	it('should not return an array for negative input', function() {
-		expect(pingPong(0)).to.not.eql([]);
 	});
 
 });
