@@ -10,6 +10,8 @@ var pingPong = function(num) {
 var numberReturn = function(num) {
 	if (num%15 === 0) {
 		return "pingpong";
+	} else if (num%5 === 0) {
+		return "pong";
 	} else {
 		return num;
 	}
