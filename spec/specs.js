@@ -21,7 +21,11 @@ describe("pingPong", function() {
 
 	it('should return pong for factors of 5', function() {
 		expect(pingPong(65)).to.equal("pong");
-	})
+	});
+
+	it('should not return pong for non-factors of 5', function() {
+			expect(pingPong(30)).to.not.equal('pong');
+		});
 
 });
 
@@ -33,4 +37,12 @@ describe('numberReturn', function() {
 	it('should not return pingpong for input of non-factor of 15', function() {
 		expect(numberReturn(43*7)).to.not.equal("pingpong");
 	});
+
+	it('should return pong for factors of 5', function() {
+		expect(numberReturn(6860)).to.equal('pong');
+	});
+
+	it('should not return pong for non-factors of 5', function() {
+			expect(numberReturn(34)).to.not.equal('pong');
+		});
 });
