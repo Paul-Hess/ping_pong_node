@@ -7,6 +7,7 @@ var pingPong = function(num) {
 
 }
 
+// aids in filtering unwanted input.
 function isNumber(num) {
 	return !isNaN(parseFloat(num)) && isFinite(num);
 }

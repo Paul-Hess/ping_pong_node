@@ -4,6 +4,10 @@ describe("pingPong", function() {
 	});
 
 	it('should allow number inputs', function() {
-		expect(pingPong(5000)).to.equal(5000);
+		expect(pingPong(5001)).to.equal(5001);
+	});
+
+	it('should return number when number is input', function() {
+		expect(pingPong(7)).to.equal(7);
 	})
 });
