@@ -31,6 +31,9 @@ describe("pingPong", function() {
 		expect(pingPong(21)).to.equal('ping');
 	});
 
+	it('should not return ping for non-factors of 3', function() {
+		expect(pingPong(23)).to.not.equal('ping');
+	});
 });
 
 describe('numberReturn', function() {
@@ -49,4 +52,12 @@ describe('numberReturn', function() {
 	it('should not return pong for non-factors of 5', function() {
 			expect(numberReturn(34)).to.not.equal('pong');
 		});
+
+	it('should return ping for factors of 3', function() {
+		expect(numberReturn(432)).to.equal('ping');
+	});
+
+	it('should not return ping for non-factors of 3', function() {
+		expect(numberReturn(35)).to.not.equal('ping');
+	});
 });
