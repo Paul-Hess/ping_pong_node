@@ -35,8 +35,9 @@ function isNumber(num) {
 }
 
 $(function() {
+	//helper function to forEach to add list items to ul.
 	function addListItems() {
-		$('ul').append(document.createElement('li'));
+		$('ul.output').append(document.createElement('li'));
 		$('li').last().append(pingArray[count]);
 		count++;	
 	}
@@ -45,6 +46,11 @@ $(function() {
 		var numberInput = $('input#toPing').val();
 		pingPong(numberInput);
 		pingArray.forEach(addListItems)
+		$('div.hide-button').show();
 		event.preventDefault();	
+	});
+
+	$('.reset').click(function() {
+		location.href = "index.html"
 	});
 });
