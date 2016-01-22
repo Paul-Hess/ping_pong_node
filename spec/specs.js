@@ -7,6 +7,10 @@ describe("pingPong", function() {
 		expect(pingPong(0)).to.equal(undefined);
 	});
 
+	it('should not handle oversized numbers for the browser to handle jQuery animation', function() {
+		expect(pingPong(1001)).to.equal(undefined);
+	});
+
 	it('should allow number inputs', function() {
 		expect(pingPong(3)).to.eql([1, 2, 'ping']);
 	});

@@ -3,10 +3,10 @@ var pingArray = [];
 
 // handles input number, verifies is a number and calls for return of ouput.
 var pingPong = function(num) {
-	if (num > 0) {
+	if (num > 0 && num < 501) {
 		return numberReturn(num);
 	} else {
-		alert("please enter a positive numeral");
+		alert("please enter a positive numeral"); 	
 	}
 }
 
@@ -38,15 +38,22 @@ $(function() {
 		count++;	
 	}
 
-	$('form#number-input').submit(function(event) {
+	$('form#number-input').on('submit', function(event) {
 		var numberInput = $('input#toPing').val();
 		pingPong(numberInput);
 		pingArray.forEach(addListItems)
+		$('html, body').animate({
+                    scrollTop: $("li").last().offset().top
+                		}, 3000);
 		$('div.hide-button').show();
 		event.preventDefault();	
 	});
 
 	$('.reset').click(function() {
 		location.href = "index.html"
+		$('html, body').animate({
+           					scrollTop: $("div.top-header").offset().top
+                		}, 1000);
 	});
+
 });
