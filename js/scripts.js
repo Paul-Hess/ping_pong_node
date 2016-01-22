@@ -11,6 +11,7 @@ var pingPong = function(num) {
 
 // returns ping and/or pong for 3 5 15 factorials.
 var numberReturn = function(num) {
+	pingArray = [];	
 	for (var i = 1; i <= num; i++){
 		if (i%15 === 0) {
 			pingArray.push("pingpong");
