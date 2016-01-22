@@ -2,7 +2,7 @@ var pingArray = [];
 
 // handles input number, verifies is a number and calls for return of ouput.
 var pingPong = function(num) {
-	if (isNumber(num)) {
+	if (isNumber(num) && num > 0) {
 		return numberReturn(num);
 	} else {
 		return "please enter a numeral";

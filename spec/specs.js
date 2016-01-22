@@ -42,6 +42,15 @@ describe("pingPong", function() {
 	it('should not return ping when 3 is not satisfied', function() {
 		expect(pingPong(2)).to.not.include('ping');
 	});
+
+	it('should not return an array for negative input', function() {
+		expect(pingPong(-1)).to.not.eql([]);
+	});
+
+	it('should not return an array for negative input', function() {
+		expect(pingPong(0)).to.not.eql([]);
+	});
+
 });
 
 describe('numberReturn', function() {
