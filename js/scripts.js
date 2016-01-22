@@ -1,11 +1,9 @@
 // holds returned numbers and strings for passing to UI.
 var pingArray = [];
-// assigns index for UI iterations through loop of returns.
-var count = 0;
 
 // handles input number, verifies is a number and calls for return of ouput.
 var pingPong = function(num) {
-	if (isNumber(num) && num > 0) {
+	if (num > 0) {
 		return numberReturn(num);
 	} else {
 		return "please enter a positive numeral";
@@ -29,12 +27,10 @@ var numberReturn = function(num) {
 	return pingArray;
 }
 
-// aids in filtering unwanted input.
-function isNumber(num) {
-	return !isNaN(parseFloat(num)) && isFinite(num);
-}
-
 $(function() {
+	//assigns index for iterations through loop of returns.
+	var count = 0;
+
 	//helper function to forEach to add list items to ul.
 	function addListItems() {
 		$('ul.output').append(document.createElement('li'));
