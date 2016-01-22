@@ -44,6 +44,7 @@ p.info {
  	height: 30px;
  	width: 150px;
  	border: none;
+ 	border-radius: 6px;
 }
 
 div.hide-button {
