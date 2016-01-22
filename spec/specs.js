@@ -26,6 +26,22 @@ describe("pingPong", function() {
 	it('should return proper array 15 is input', function() {
 		expect(pingPong(15)).to.eql([1, 2, 'ping', 4, 'pong', 'ping', 7, 8, 'ping', 'pong', 11, 'ping', 13, 14, 'pingpong']);
 	});
+
+	it('should pass number to numberReturn and get array back', function() {
+		expect(pingPong(3)).to.satisfy(function() {return []});
+	});
+
+	it('should not return pingpong when 15 is not satisfied', function() {
+		expect(pingPong(14)).to.not.include('pingpong');
+	});
+
+	it('should not return pong when 5 is not satisfied', function() {
+		expect(pingPong(4)).to.not.include('pong');
+	});
+
+	it('should not return ping when 3 is not satisfied', function() {
+		expect(pingPong(2)).to.not.include('ping');
+	});
 });
 
 describe('numberReturn', function() {
