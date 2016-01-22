@@ -13,5 +13,20 @@ describe("pingPong", function() {
 
 	it('should return pingpong for input of factor of 15', function() {
 		expect(pingPong(45)).to.equal("pingpong");
-	})
+	});
+
+	it('should not return pingpong for input of non-factor of 15', function() {
+		expect(pingPong(42)).to.not.equal("pingpong");
+	});
+
+});
+
+describe('numberReturn', function() {
+	it('should return pingpong for input of factor of 15', function() {
+		expect(pingPong(45*7)).to.equal("pingpong");
+	});
+
+	it('should not return pingpong for input of non-factor of 15', function() {
+		expect(pingPong(43*7)).to.not.equal("pingpong");
+	});
 });
