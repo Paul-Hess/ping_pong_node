@@ -1,11 +1,14 @@
+// holds returned numbers and strings for passing to UI.
 var pingArray = [];
+// assigns index for UI iterations through loop of returns.
+var count = 0;
 
 // handles input number, verifies is a number and calls for return of ouput.
 var pingPong = function(num) {
 	if (isNumber(num) && num > 0) {
 		return numberReturn(num);
 	} else {
-		return "please enter a numeral";
+		return "please enter a positive numeral";
 	}
 }
 
@@ -30,3 +33,18 @@ var numberReturn = function(num) {
 function isNumber(num) {
 	return !isNaN(parseFloat(num)) && isFinite(num);
 }
+
+$(function() {
+	function addListItems() {
+		$('ul').append(document.createElement('li'));
+		$('li').last().append(pingArray[count]);
+		count++;	
+	}
+
+	$('form#number-input').submit(function(event) {
+		var numberInput = $('input#toPing').val();
+		pingPong(numberInput);
+		pingArray.forEach(addListItems)
+		event.preventDefault();	
+	});
+});

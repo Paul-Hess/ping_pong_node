@@ -1,6 +1,6 @@
 describe("pingPong", function() {
 	it('should reject non number inputs', function() {
-		expect(pingPong('foo')).to.eql("please enter a numeral");
+		expect(pingPong('foo')).to.equal("please enter a positive numeral");
 	});
 
 	it('should allow number inputs', function() {
