@@ -1,3 +1,4 @@
+// handles input number, verifies is a number and calls for return of ouput.
 var pingPong = function(num) {
 	if (isNumber(num)) {
 		return numberReturn(num);
@@ -12,9 +13,11 @@ var numberReturn = function(num) {
 		return "pingpong";
 	} else if (num%5 === 0) {
 		return "pong";
+	} else if (num%3 === 0) {
+		return "ping";
 	} else {
 		return num;
-	}
+	} 
 }
 
 // aids in filtering unwanted input.

@@ -4,7 +4,7 @@ describe("pingPong", function() {
 	});
 
 	it('should allow number inputs', function() {
-		expect(pingPong(5001)).to.equal(5001);
+		expect(pingPong(5002)).to.equal(5002);
 	});
 
 	it('should return number when number is input', function() {
@@ -26,6 +26,10 @@ describe("pingPong", function() {
 	it('should not return pong for non-factors of 5', function() {
 			expect(pingPong(30)).to.not.equal('pong');
 		});
+
+	it('should return ping for factors of 3', function() {
+		expect(pingPong(21)).to.equal('ping');
+	});
 
 });
 
