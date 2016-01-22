@@ -1,4 +1,7 @@
 describe("pingPong", function() {
+
+	alert = function() {};
+	
 	it('should reject non number inputs', function() {
 		expect(pingPong(-1)).to.equal(undefined);
 	});
@@ -54,7 +57,8 @@ describe("pingPong", function() {
 });
 
 describe('numberReturn', function() {
-		it('should return array when number is input', function() {
+	
+	it('should return array when number is input', function() {
 		expect(pingPong(9)).to.eql([1, 2, 'ping', 4, 'pong', 'ping', 7, 8, 'ping']);
 	});
 

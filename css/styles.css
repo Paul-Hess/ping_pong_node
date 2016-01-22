@@ -26,8 +26,6 @@ div.sidebar {
 	float: left;
 }
 
-
-
 p.info-name {
 	color: #FFE2B1;
 }
@@ -39,7 +37,8 @@ a.git {
 p.info {
 	color: #FFFFFF;
 }
- button {
+
+button {
  	background-color: #bfbfbf;
  	height: 30px;
  	width: 150px;
@@ -50,7 +49,6 @@ p.info {
 div.hide-button {
  display: none;
 }
-
 
 div.output, div.rules {
 	border: 1px solid #bfbfbf;
