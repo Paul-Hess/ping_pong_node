@@ -51,9 +51,7 @@ $(function() {
 
 	$('.reset').click(function() {
 		location.href = "index.html"
-		$('html, body').animate({
-           					scrollTop: $("div.top-header").offset().top
-                		}, 1000);
+		$(this).scrollTop(0);
 	});
 
 });
