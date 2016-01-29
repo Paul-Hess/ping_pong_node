@@ -50,7 +50,7 @@ div.hide-button {
  display: none;
 }
 
-div.output, div.rules {
+div.main, div.rules {
 	border: 1px solid #bfbfbf;
 	text-align: center;
 	margin-top: 5.5%;
@@ -67,6 +67,7 @@ ul {
 ul li {
 	font-size: 2em;
 	border: 1px solid #bfbfbf;
+	margin-right: 3.5%;
 }
 
 ol {
