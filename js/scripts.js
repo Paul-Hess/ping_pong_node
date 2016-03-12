@@ -1,4 +1,4 @@
-
+var pingPong = require('./pingPong.js').pingPong;
 
 $(function() {
 	$('html, body').scrollTop(0);
