@@ -1,4 +1,4 @@
-var pingPong = require('./pingPong.js').pingPong;
+var pingPong = require('./../js/pingPong.js').pingPong;
 
 $(function() {
 	$('html, body').scrollTop(0);
@@ -29,4 +29,12 @@ $(function() {
 		$(document).scrollTop(0);
 	});
 
+});
+$(function() {
+	$('.signup').submit(function(event) {
+		event.preventDefault();
+		var email = $('#signup-email').val();
+		$('.signup').hide();
+		$('.output').prepend('<p>Thank you ' + email + '</p>');
+	});
 });

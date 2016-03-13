@@ -1,3 +1,6 @@
+var expect = require('chai').expect;
+var pingPong = require('./../js/pingPong.js').pingPong;
+
 describe("pingPong", function() {
 
 	it('should return a number ', function() {
